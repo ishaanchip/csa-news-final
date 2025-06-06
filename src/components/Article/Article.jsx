@@ -44,7 +44,7 @@ const Article = () => {
             }
             <div className="reference-area"> 
                 <h3>References</h3>
-                <p>Zewe, Adam. “Ai Learns How Vision and Sound Are Connected, without Human Intervention.” MIT News | Massachusetts Institute of Technology, 22 May 2025, news.mit.edu/2025/ai-learns-how-vision-and-sound-are-connected-without-human-intervention-0522. </p>
+                <p>{homeArticleFullSet[id].citation}</p>
             </div>
             </div>
             <div className="article-ads">

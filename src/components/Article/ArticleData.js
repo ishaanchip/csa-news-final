@@ -61,7 +61,7 @@ export const articleTwo = {
     author:'arjun manjunatha',
     release_date:'6/6/25',
     img:testImg,
-    citation:"",
+    citation:"Jarvis, Michaela. “The Sweet Taste of a New Idea.” MIT News, 19 May 2025, https://news.mit.edu/2025/sweet-taste-new-idea-sendhil-mullainathan-0519. Accessed 6 June 2025.",
     sponserOne:{
         img:sponserOne,
         link:"https://www.freecodecamp.org/learn"
@@ -94,7 +94,7 @@ export const articleThree = {
     author: "ishaan chiplunkar",
     release_date: "5/28/25",
     img: testImg,
-    citation: "https://news.mit.edu/2025/anomaly-detection-framework-anyone-can-use-sarah-alnegheimish-0528",
+    citation: "Williams, Barbra Gilley. “An Anomaly Detection Framework Anyone Can Use.” MIT News, 28 May 2025, https://news.mit.edu/2025/anomaly-detection-framework-anyone-can-use-sarah-alnegheimish-0528. Accessed 6 June 2025.",
     sponserOne: {
       img: sponserOne,
       link: "https://www.freecodecamp.org/learn"
@@ -123,7 +123,7 @@ export const articleFour = {
     author: "arjun manjunatha",
     release_date: "6/3/25",
     img: testImg,
-    citation: "https://news.mit.edu/2025/themis-ai-teaches-ai-models-what-they-dont-know-0603",
+    citation: "Winn, Zach. “Themis AI Teaches AI Models What They Don’t Know.” MIT News, 3 June 2025, https://news.mit.edu/2025/themis-ai-teaches-ai-models-what-they-dont-know-0603. Accessed 6 June 2025.",
     sponserOne: {
       img: sponserOne,
       link: "https://www.freecodecamp.org/learn"
@@ -146,7 +146,7 @@ export const articleFive = {
     author: "ishaan chiplunkar",
     release_date: "5/20/25",
     img: testImg,
-    citation: "https://news.mit.edu/2025/scientists-discover-potential-new-targets-alzheimers-drugs-0520",
+    citation: "Trafton, Anne. “Scientists Discover Potential New Targets for Alzheimer’s Drugs.” MIT News, 20 May 2025, https://news.mit.edu/2025/scientists-discover-potential-new-targets-alzheimers-drugs-0520. Accessed 6 June 2025.",
     sponserOne: {
       img: sponserOne,
       link: "https://www.freecodecamp.org/learn"
@@ -175,7 +175,7 @@ export const articleSix = {
     author: "arjun manjunatha",
     release_date: "5/21/25",
     img: testImg,
-    citation: "https://news.mit.edu/2025/learning-how-predict-rare-kinds-failures-0521",
+    citation: "“Learning How to Predict Rare Kinds of Failures.” MIT News, 21 May 2025, https://news.mit.edu/2025/learning-how-predict-rare-kinds-failures-0521. Accessed 6 June 2025.",
     sponserOne: {
       img: sponserOne,
       link: "https://www.freecodecamp.org/learn"
