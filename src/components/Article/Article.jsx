@@ -61,36 +61,7 @@ const Article = () => {
                             <p>Free Code Camp is a non-profit that provides free online coding courses and certifications in various fields, including web development, data science, and more.</p>
                     </div>
                 </div>
-                <div className="slot">
-                  <div className="slot-three">
-                      <Link to={`/article/${0}`} className='rec-article'>
-                        <div className="cover-image-area">
-                            <img src={homeArticleFullSet[0].img}  alt="rec-article-image" /> 
-                        </div>
-                        <div className="rec-text">
-                            <div className="data">
-                                <h1 className='article-title'>{homeArticleFullSet[0].title} </h1>
-                                <p className='article-description'>A {homeArticleFullSet[0].mini_description}</p>
-                                <p className='metadata'>{homeArticleFullSet[0].release_date}</p>
-                                <p className='metadata'>{homeArticleFullSet[0].author} </p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={`/article/${1}`} className='rec-article'>
-                        <div className="cover-image-area">
-                            <img src={homeArticleFullSet[1].img}  alt="rec-article-image" /> 
-                        </div>
-                        <div className="rec-text">
-                            <div className="data">
-                                <h1 className='article-title'>{homeArticleFullSet[1].title} </h1>
-                                <p className='article-description'>A {homeArticleFullSet[1].mini_description}</p>
-                                <p className='metadata'>{homeArticleFullSet[1].release_date}</p>
-                                <p className='metadata'>{homeArticleFullSet[1].author} </p>
-                            </div>
-                        </div>
-                    </Link>
-                  </div>
-                </div>
+
             </div>
 
 
