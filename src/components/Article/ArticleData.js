@@ -58,7 +58,7 @@ export const articleOne = {
 export const articleTwo = {
     title:"An Economist's Dream",
     mini_description:"This article summarizes Behavioral Economist Senthil Mullainathan's love for the combination of economics, computer science, and new ideas. ",
-    author:'ishaan chiplunkar',
+    author:'arjun manjunatha',
     release_date:'6/6/25',
     img:testImg,
     citation:"",
@@ -120,7 +120,7 @@ export const articleThree = {
 export const articleFour = {
     title: "Themis AI",
     mini_description: "Themis AI, started by MIT researchers including Professor Daniela Rus, is working to make AI more trustworthy by helping models know when they don’t know something.",
-    author: "ishaan chiplunkar",
+    author: "arjun manjunatha",
     release_date: "6/3/25",
     img: testImg,
     citation: "https://news.mit.edu/2025/themis-ai-teaches-ai-models-what-they-dont-know-0603",
@@ -172,7 +172,7 @@ export const articleFive = {
 export const articleSix = {
     title: "Predicting Rare Failures",
     mini_description: "MIT researchers have developed a new system to help predict and understand rare, large-scale failures in complex automated systems — like the Southwest Airlines scheduling meltdown during the 2022 holiday season.",
-    author: "ishaan chiplunkar",
+    author: "arjun manjunatha",
     release_date: "5/21/25",
     img: testImg,
     citation: "https://news.mit.edu/2025/learning-how-predict-rare-kinds-failures-0521",
@@ -201,3 +201,5 @@ export const articleSix = {
 export const homeArticleMainSet = articleTwo
 
 export const homeArticleSideSet = [articleThree, articleFour, articleFive, articleSix];
+
+export const homeArticleFullSet = [articleTwo, articleThree, articleFour, articleFive, articleSix]
