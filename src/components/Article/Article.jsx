@@ -6,6 +6,7 @@ import testImg from "../../assets/comp.jpg"
 
 //intercomponent imports
 import { homeArticleFullSet } from './ArticleData'
+import { getWordCount } from './ArticleHelper'
 
 //external dependenices
 import { Link, useParams } from 'react-router-dom'
@@ -37,7 +38,7 @@ const Article = () => {
 
             <div className="article-content">
             <div className="feature-bar">
-              <p className="word-count">565 words</p>
+              <p className="word-count">{getWordCount(homeArticleFullSet[id])} words</p>
               <p>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
               <p>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
               </div>

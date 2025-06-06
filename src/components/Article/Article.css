@@ -35,6 +35,7 @@
 
 .article-data p{
     line-height: 1.75;
+    color:white;
 }
 
 .article-authorship{
@@ -69,6 +70,7 @@
     align-items: center;
     width:50%;
     height:50px;
+    padding:1%;
     border:2px solid black;
 }
 
@@ -81,11 +83,13 @@
     width:80%;
     margin-top: 5%;
     margin-bottom:2.5%;
+    color:black;
 }
 
 .article-area .article-content p{
     font-size: 16px;
     line-height:2.5;
+    color:black;
 }
 
 .reference-area{
@@ -128,17 +132,20 @@
 
 .article-ads .slot-one h1{
     font-size: 26px;
+    color:black;
     margin-bottom: 5%;
 }
 
 .article-ads .slot-one p{
     font-size:16px;
     line-height: 2;
+    color:black;
 }
 
 .article-ads .slot-two{
     display: flex;
     background-color: whitesmoke;
+    color:black;
     width:90%;
     height:50%;
     margin: 0 auto;
