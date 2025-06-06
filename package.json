@@ -1,7 +1,6 @@
 {
   "name": "test-run",
   "homepage": "https://ishaanchip.github.io/csa-news-final/",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

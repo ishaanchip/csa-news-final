@@ -4,10 +4,10 @@ import Home from './components/Home/Home'
 import Article from './components/Article/Article'
 const Router = () => {
 return (
-  <BrowserRouter basename='/'>
+  <BrowserRouter basename='/csa-news-final'>
       <Routes>
-          <Route path="/csa-news-final" element={<Home/>}></Route>
-          <Route path="/csa-news-final/article/:id" element={<Article/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/article/:id" element={<Article/>}></Route>
           {/* <Route path="/construction" element={<Construction/>}></Route> */}
       </Routes>
   </BrowserRouter>

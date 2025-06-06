@@ -15,7 +15,7 @@ const Article = () => {
   return (
     <div className='article-shell'>
         <div className="header-shell">
-            <Link to="/csa-news-final" className='title-style'> CSToday 🖥️</Link>
+            <Link to="/" className='title-style'> CSToday 🖥️</Link>
         </div>
         <div className="title-area">
             <div className="article-data">

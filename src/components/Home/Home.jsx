@@ -17,10 +17,10 @@ const Home = () => {
   return (
     <div className='home-shell'>
       <div className="header-shell">
-        <Link to="/csa-news-final" className='title-style'> CSToday 🖥️</Link>
+        <Link to="/" className='title-style'> CSToday 🖥️</Link>
       </div>
       <div className="article-selection">
-      <Link to="/csa-news-final/article/0" className='recent-article'>
+      <Link to="/article/0" className='recent-article'>
 
           <div className="cover-image-area">
               <img  src={homeArticleMainSet.img} alt="recent-article-image" /> 
@@ -41,7 +41,7 @@ const Home = () => {
 
           {homeArticleSideSet.map((data, i) =>(
               <div className="mini-article">
-              <Link to={`/csa-news-final/article/${i+1}`} className="top">
+              <Link to={`/article/${i+1}`} className="top">
                 <img src={data.img} alt="recent-article-image" style={{'filter': `hue-rotate(${45 + 45*i}deg)`}}/> 
                 <h1>{data.title}</h1>
               </Link>
