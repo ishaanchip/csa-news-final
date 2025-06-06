@@ -53,14 +53,13 @@ export const articleOne = {
 
     ]
 
-
 }
 
 export const articleTwo = {
     title:"An Economist's Dream",
     mini_description:"This article summarizes Behavioral Economist Senthil Mullainathan's love for the combination of economics, computer science, and new ideas. ",
     author:'ishaan chiplunkar',
-    release_date:'5/28/25',
+    release_date:'6/6/25',
     img:testImg,
     citation:"",
     sponserOne:{
@@ -199,3 +198,6 @@ export const articleSix = {
     ]
   }
   
+export const homeArticleMainSet = articleTwo
+
+export const homeArticleSideSet = [articleThree, articleFour, articleFive, articleSix];

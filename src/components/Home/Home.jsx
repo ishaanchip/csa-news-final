@@ -5,6 +5,7 @@ import "./Home.css"
 import testImg from "../../assets/comp.jpg"
 
 //intercomponent imports
+import { homeArticleMainSet, homeArticleSideSet } from '../Article/ArticleData'
 
 
 //external dependenices
@@ -22,54 +23,33 @@ const Home = () => {
       <Link to="article" className='recent-article'>
 
           <div className="cover-image-area">
-              <img  src={testImg} alt="recent-article-image" /> 
+              <img  src={homeArticleMainSet.img} alt="recent-article-image" /> 
           </div>
           <div className="summary-text">
             <div className="info-tag">
               <p>Latest Release</p>
             </div>
             <div className="data">
-              <h1 className='article-title'>Revolutionary AI Invention</h1>
-              <p className='article-description'>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
-              <p className='metadata'>5/26/25</p>
-              <p className='metadata'>written by ishaan chiplunkar</p>
+              <h1 className='article-title'>{homeArticleMainSet.title}</h1>
+              <p className='article-description'>{homeArticleMainSet.mini_description}</p>
+              <p className='metadata'>{homeArticleMainSet.release_date}</p>
+              <p className='metadata'>{homeArticleMainSet.author}</p>
             </div>
           </div>
       </Link>
         <div className="recent-catalog">
 
-          <div className="mini-article"> 
-            <Link to='article' className="top">
-              <img src={testImg} alt="recent-article-image" /> 
-              <h1>Revolutionary AI Invention</h1>
-            </Link>
-            <p>Raising important questions about ethics and control.</p>
-          </div>
+          {homeArticleSideSet.map((data, i) =>(
+              <div className="mini-article">
+              <Link to='article' className="top">
+                <img src={data.img} alt="recent-article-image" style={{'filter': `hue-rotate(${45 + 45*i}deg)`}}/> 
+                <h1>{data.title}</h1>
+              </Link>
+              <p>{data.mini_description}</p>
+            </div>
+            
 
-          <div className="mini-article"> 
-            <Link to='article' className="top">
-              <img src={testImg} alt="recent-article-image" /> 
-              <h1>Revolutionary AI Invention AI Invention</h1>
-            </Link>
-            <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
-          </div>
-
-          <div className="mini-article">  
-            <Link to='article' className="top">
-              <img src={testImg} alt="recent-article-image" /> 
-              <h1>Revolutionary AI Invention</h1>
-            </Link>
-            <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
-          </div>
-
-
-          <div className="mini-article"> 
-            <Link to='article' className="top">
-              <img src={testImg} alt="recent-article-image" /> 
-              <h1>Revolutionary AI Invention AI Invention</h1>
-            </Link>
-            <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
-          </div>
+          ))}
 
         </div>
       </div>
