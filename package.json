@@ -1,5 +1,6 @@
 {
   "name": "test-run",
+  "homepage": "https://ishaanchip.github.io/csa-news-final/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.80.6",
     "axios": "^1.9.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
