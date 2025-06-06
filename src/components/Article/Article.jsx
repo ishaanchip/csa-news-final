@@ -9,6 +9,7 @@ import { homeArticleFullSet } from './ArticleData'
 
 //external dependenices
 import { Link, useParams } from 'react-router-dom'
+import {ArrowUpIcon, ArrowDownIcon} from "@heroicons/react/24/solid"
 
 const Article = () => {
   const {id} = useParams()
@@ -33,7 +34,13 @@ const Article = () => {
         </div>
 
         <div className="article-area">
+
             <div className="article-content">
+            <div className="feature-bar">
+              <p className="word-count">565 words</p>
+              <p>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
+              <p>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
+              </div>
             {
                 homeArticleFullSet[id].text.map((section) =>(
                     <div>

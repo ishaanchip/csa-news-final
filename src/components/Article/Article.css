@@ -59,8 +59,17 @@
 .article-area{
     display: flex;
     margin-left: 12.5%;
-    margin-top: 5%;
+    margin-top: 2.5%;
     width:90%;
+}
+
+.article-area .feature-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:50%;
+    height:50px;
+    border:2px solid black;
 }
 
 .article-content{
@@ -99,6 +108,7 @@
     min-height: 1450px;
     width:35%;
     margin-left: 5%;
+    margin-top: 2.5%;
 }
 
 .article-ads .slot{
@@ -200,6 +210,9 @@
 
 @media only screen and (max-width: 1200px){
 
+    .article-area .feature-bar{
+        width:75%;
+    }
     .article-img{
         height:85%;
         width:50%;
