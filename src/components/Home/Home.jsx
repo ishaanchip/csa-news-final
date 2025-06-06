@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./Home.css"
 
 //images & icons
-// import testImg from "../../assets/comp.jpg"
+import testImg from "../../assets/comp.jpg"
 
 //intercomponent imports
 
@@ -22,7 +22,7 @@ const Home = () => {
       <Link to="article" className='recent-article'>
 
           <div className="cover-image-area">
-              <img  alt="recent-article-image" /> 
+              <img  src={testImg} alt="recent-article-image" /> 
           </div>
           <div className="summary-text">
             <div className="info-tag">
@@ -40,7 +40,7 @@ const Home = () => {
 
           <div className="mini-article"> 
             <Link to='article' className="top">
-              <img alt="recent-article-image" /> 
+              <img src={testImg} alt="recent-article-image" /> 
               <h1>Revolutionary AI Invention</h1>
             </Link>
             <p>Raising important questions about ethics and control.</p>
@@ -48,7 +48,7 @@ const Home = () => {
 
           <div className="mini-article"> 
             <Link to='article' className="top">
-              <img alt="recent-article-image" /> 
+              <img src={testImg} alt="recent-article-image" /> 
               <h1>Revolutionary AI Invention AI Invention</h1>
             </Link>
             <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
@@ -56,7 +56,7 @@ const Home = () => {
 
           <div className="mini-article">  
             <Link to='article' className="top">
-              <img alt="recent-article-image" /> 
+              <img src={testImg} alt="recent-article-image" /> 
               <h1>Revolutionary AI Invention</h1>
             </Link>
             <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
@@ -65,7 +65,7 @@ const Home = () => {
 
           <div className="mini-article"> 
             <Link to='article' className="top">
-              <img alt="recent-article-image" /> 
+              <img src={testImg} alt="recent-article-image" /> 
               <h1>Revolutionary AI Invention AI Invention</h1>
             </Link>
             <p>A groundbreaking AI invention is reshaping industries, boosting efficiency, enabling automation, and raising important questions about ethics and control.</p>
