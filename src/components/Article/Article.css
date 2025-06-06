@@ -148,7 +148,7 @@
     line-height: 2;
     font-family: "Roboto Mono", monospace;
 }
-
+/* 
 .article-ads .slot-three{
     display: flex;
     flex-direction: column;
@@ -164,7 +164,6 @@
     width:90%;
     height:30%;
     margin-top: -50%;
-    /* box-shadow: 5px 5px 5px gray; */
     text-decoration: none;
     color:black;
     background-color: whitesmoke;
@@ -196,7 +195,7 @@
 .rec-article .rec-text p{
     font-size:8px;
 }
-
+*/
 
 
 @media only screen and (max-width: 1200px){
