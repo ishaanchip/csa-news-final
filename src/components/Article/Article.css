@@ -96,6 +96,10 @@
     margin-top: 10%;
 }
 
+.reference-area h3{
+    color:black;
+}
+
 .reference-area p{
     text-indent: -2.5%;
     padding-left: 2.5%;
