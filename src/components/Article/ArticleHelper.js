@@ -12,6 +12,7 @@ export const getWordCount = (article) =>{
     return sum;
 }
 
+//2. changing font size
 export const navigateFontSize = (currentSize, direction) => {
     let fontSet = [
         {
@@ -31,10 +32,7 @@ export const navigateFontSize = (currentSize, direction) => {
         }
     ]
 
-    console.log('running?')
-
     if (direction == "inc" && currentSize < fontSet.length- 1){
-        console.log('inc?')
         return {
             fontSet: fontSet[currentSize + 1],
             size:currentSize + 1,
@@ -43,7 +41,6 @@ export const navigateFontSize = (currentSize, direction) => {
     }
     
     if (direction == "dec" && currentSize > 0){
-        console.log('dec?')
         return {
             fontSet: fontSet[currentSize - 1],
             size:currentSize - 1,
@@ -57,3 +54,4 @@ export const navigateFontSize = (currentSize, direction) => {
         size:currentSize,  
     };
 }
+

@@ -13,36 +13,65 @@ import { Link, useParams } from 'react-router-dom'
 import {ArrowUpIcon, ArrowDownIcon} from "@heroicons/react/24/solid"
 
 const Article = () => {
-  //getting article id
-  const {id} = useParams();
+  //RETRIEVING ARTICLE: getting article id
+        const {id} = useParams();
 
 
-  //word size variables
-  const [wordSize,  setWordSize] = useState({
-    "h1":30,
-    "h3":24,
-    "p":16
-  })
-  const [wordSizeType, setWordSizeType] = useState(1);
+  //ADJUSTING FONT: word size variables
+        const [wordSize,  setWordSize] = useState({
+            "h1":30,
+            "h3":24,
+            "p":16
+        })
+        const [wordSizeType, setWordSizeType] = useState(1);
 
-  const [fontData, setFontData] = useState({
-    fontSet:{
-        "h1":30,
-        "h3":24,
-        "p":16
-    },
-    size:1
-  })
+        const [fontData, setFontData] = useState({
+            fontSet:{
+                "h1":30,
+                "h3":24,
+                "p":16
+            },
+            size:1
+        })
 
+        const handleNavigateFontSize = (direction) =>{
+            setFontData(navigateFontSize(wordSizeType, direction))
+        }
 
-  const handleNavigateFontSize = (direction) =>{
-    setFontData(navigateFontSize(wordSizeType, direction))
-  }
+        useEffect(() =>{
+            setWordSize(fontData.fontSet);
+            setWordSizeType(fontData.size);
+        }, [fontData])
 
-  useEffect(() =>{
-    setWordSize(fontData.fontSet);
-    setWordSizeType(fontData.size);
-  }, [fontData])
+    
+    //DYNAMIC INTRODUCTION
+            const [introText, setIntroText] = useState("");
+
+            const delay = (ms) => new Promise((resolve) => {
+                setTimeout(resolve, ms)
+            })
+
+            const loadIntroText = async() =>{
+                let localText = "";
+                let cursor = "|"
+                let fullText = homeArticleFullSet[id].mini_description
+                for (let i = 0; i < fullText.length; i++){
+                    localText += fullText[i];
+                    await delay(35);
+                    setIntroText(localText + cursor);
+                }
+                await delay(500)
+                setIntroText(localText)
+                await delay(500)
+                setIntroText(localText + cursor)
+                await delay(500)
+                setIntroText(localText)
+            }
+
+            useEffect(() =>{
+                loadIntroText();
+            }, [])
+
 
 
 
@@ -55,11 +84,16 @@ const Article = () => {
         <div className="title-area">
             <div className="article-data">
                 <h1>{homeArticleFullSet[id].title}</h1>
-                <p>{homeArticleFullSet[id].mini_description}</p>
+                <p className='intro-text'>{introText}</p>
                 <div className="article-authorship">
                     <p>{homeArticleFullSet[id].author}</p>
                     <p>{homeArticleFullSet[id].release_date}</p>
                 </div>
+                <div className="feature-bar">
+              <p className="word-count">{getWordCount(homeArticleFullSet[id])} words</p>
+              <p onClick={() => handleNavigateFontSize("inc")} style={wordSizeType == 2 ? {'color':'gray'} : {'color':'white'}}>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
+              <p onClick={() => handleNavigateFontSize("dec")} style={wordSizeType == 0 ? {'color':'gray'} : {'color':'white'}}>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
+            </div>
 
             </div>
             <div className="article-img">
@@ -70,11 +104,7 @@ const Article = () => {
         <div className="article-area">
 
             <div className="article-content">
-            <div className="feature-bar">
-              <p className="word-count">{getWordCount(homeArticleFullSet[id])} words</p>
-              <p onClick={() => handleNavigateFontSize("inc")} style={wordSizeType == 2 ? {'color':'gray'} : {'color':'black'}}>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
-              <p onClick={() => handleNavigateFontSize("dec")} style={wordSizeType == 0 ? {'color':'gray'} : {'color':'black'}}>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
-              </div>
+
             {
                 homeArticleFullSet[id].text.map((section) =>(
                     <div>
