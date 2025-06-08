@@ -91,8 +91,8 @@ const Article = () => {
                 </div>
                 <div className="feature-bar">
               <p className="word-count">{getWordCount(homeArticleFullSet[id])} words</p>
-              <p onClick={() => handleNavigateFontSize("inc")} style={wordSizeType == 2 ? {'color':'gray'} : {'color':'white'}}>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
-              <p onClick={() => handleNavigateFontSize("dec")} style={wordSizeType == 0 ? {'color':'gray'} : {'color':'white'}}>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
+              <p onClick={() => handleNavigateFontSize("inc")} style={wordSizeType == 2 ? {'color':'gray'} : {'color':'white'}}>A <ArrowUpIcon className='icons' ></ArrowUpIcon></p>
+              <p onClick={() => handleNavigateFontSize("dec")} style={wordSizeType == 0 ? {'color':'gray'} : {'color':'white'}}>a <ArrowDownIcon className='icons'></ArrowDownIcon></p>
             </div>
 
             </div>
