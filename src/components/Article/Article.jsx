@@ -6,14 +6,47 @@ import testImg from "../../assets/comp.jpg"
 
 //intercomponent imports
 import { homeArticleFullSet } from './ArticleData'
-import { getWordCount } from './ArticleHelper'
+import { getWordCount, navigateFontSize } from './ArticleHelper'
 
 //external dependenices
 import { Link, useParams } from 'react-router-dom'
 import {ArrowUpIcon, ArrowDownIcon} from "@heroicons/react/24/solid"
 
 const Article = () => {
-  const {id} = useParams()
+  //getting article id
+  const {id} = useParams();
+
+
+  //word size variables
+  const [wordSize,  setWordSize] = useState({
+    "h1":30,
+    "h3":24,
+    "p":16
+  })
+  const [wordSizeType, setWordSizeType] = useState(1);
+
+  const [fontData, setFontData] = useState({
+    fontSet:{
+        "h1":30,
+        "h3":24,
+        "p":16
+    },
+    size:1
+  })
+
+
+  const handleNavigateFontSize = (direction) =>{
+    setFontData(navigateFontSize(wordSizeType, direction))
+  }
+
+  useEffect(() =>{
+    setWordSize(fontData.fontSet);
+    setWordSizeType(fontData.size);
+  }, [fontData])
+
+
+
+
   return (
     <div className='article-shell'>
         <div className="header-shell">
@@ -39,20 +72,20 @@ const Article = () => {
             <div className="article-content">
             <div className="feature-bar">
               <p className="word-count">{getWordCount(homeArticleFullSet[id])} words</p>
-              <p>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
-              <p>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
+              <p onClick={() => handleNavigateFontSize("inc")} style={wordSizeType == 2 ? {'color':'gray'} : {'color':'black'}}>A <ArrowUpIcon style={{'width':'18px'}}></ArrowUpIcon></p>
+              <p onClick={() => handleNavigateFontSize("dec")} style={wordSizeType == 0 ? {'color':'gray'} : {'color':'black'}}>a <ArrowDownIcon style={{'width':'18px'}}></ArrowDownIcon></p>
               </div>
             {
                 homeArticleFullSet[id].text.map((section) =>(
                     <div>
-                        <h1>{section.header}</h1>
-                        <p>{section.content}</p>
+                        <h1 style={{'fontSize':`${wordSize.h1}px`}}>{section.header}</h1>
+                        <p style={{'fontSize':`${wordSize.p}px`}}>{section.content}</p>
                     </div>
                 ))
             }
             <div className="reference-area"> 
-                <h3>References</h3>
-                <p>{homeArticleFullSet[id].citation}</p>
+                <h3 style={{'fontSize':`${wordSize.h3}px`}}>References</h3>
+                <p style={{'fontSize':`${wordSize.p}px`}}>{homeArticleFullSet[id].citation}</p>
             </div>
             </div>
             <div className="article-ads">
